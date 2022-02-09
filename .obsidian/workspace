@@ -1,0 +1,108 @@
+{
+  "main": {
+    "id": "966d6b055fcf5ef8",
+    "type": "split",
+    "children": [
+      {
+        "id": "32d288445b320b3e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Technische Informatik Lernzettel.md",
+            "mode": "source"
+          }
+        },
+        "group": "331db33eb4d3b851"
+      },
+      {
+        "id": "0e20b017b8315411",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Technische Informatik Lernzettel.md",
+            "mode": "preview"
+          }
+        },
+        "group": "331db33eb4d3b851"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5be1e7138212f17e",
+    "type": "split",
+    "children": [
+      {
+        "id": "08201c91a852d3ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a5cdaeedfb281da",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "4592286cc78a1827",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "k",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "7cba7dcaad8cbac4",
+    "type": "split",
+    "children": [
+      {
+        "id": "d82775d58fb344ae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd7cbaa2cd6e58cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Technische Informatik Lernzettel.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "32d288445b320b3e",
+  "lastOpenFiles": [
+    "Technische Informatik Lernzettel.md"
+  ]
+}
