@@ -1,4 +1,5 @@
 {
   "vimMode": true,
-  "foldHeading": true
+  "foldHeading": true,
+  "autoPairMarkdown": false
 }
