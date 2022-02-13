@@ -633,3 +633,203 @@ ergibt -20
 
 Wenn nur die Determinante berechnet werden sollte, hätten die beiden ersten Umformungsschritte genügt. (hier wurden noch die Lösungen berechnet)
 ![[Pasted image 20220212174012.png]]
+# 6 Matrizen
+## Multiplikation mit einem Vektor
+Sei A eine ($m \times x$-Matrix), und
+![[Pasted image 20220213142256.png]]
+dann ist die Multipliatkion
+![[Pasted image 20220213142307.png]]
+
+die Reihenfolge ist wichtig hier ist A links und $\vec x$ rechts
+
+### 6.0.0.1 Beispiel
+Anzahl der Spalte muss mit der Länge des Vektors übereinstimmen
+![[Pasted image 20220213142645.png]]
+
+## 6.1 Lineare Abbildung
+Abbildungen, die durch Multiplikation einer Matrix erzeugt werden, respektieren die bereits bekannten Vektorraumoperationen
+![[Pasted image 20220213142918.png]]
+oder einfach
+![[Pasted image 20220213144408.png]]
+Diese Eigenschaft nennt sich ==Linearität== und eine solche Abbildung heißt ==linear==.
+
+Allgemein definiert: Sei f eine Abbildung von einem Vektorraum $V_1$ in einen Vektorraum $V_2$.
+Falls für alle
+![[Pasted image 20220213143123.png]]
+![[Pasted image 20220213143130.png]]
+oder einfach
+![[Pasted image 20220213144339.png]]
+dann nennen wir f eine ==lineare Abbildung==.
+
+Die Determinante ist auch eine lineare Abbildung.
+## 6.1.3 Matrixdarstellung von linearen Abbildungen
+Es gilt auch umgekehrt, dass jede lineare Abbildung durch eine Matrix dargestellt werden kann.
+Das heißt die Abbildung f lässst sich bzgl. einer Basis mit Hilfe iner $m \times n$-Matrix darstellen.
+Es gibt also eine Matrix  A mit: ![[Pasted image 20220213143803.png]]
+
+### Beispiel Projektion
+![[Pasted image 20220213144249.png]]
+es soll gelten ![[Pasted image 20220213144513.png]]
+für die linke Seite gilt:
+![[Pasted image 20220213144526.png]]
+für die rechte Seite gilt:
+![[Pasted image 20220213144542.png]]
+→ Linearität ist erfüllt
+
+Um die Matrix der Abbildung aufzustellen, untersucht man die Bilder der Basisvektoren:
+![[Pasted image 20220213144923.png]]
+diese Vektoren bilden die Spalten der gesuchten Matrix:
+![[Pasted image 20220213145023.png]]
+
+## 6.2 Rechnen mit Matrizen
+- für die Addition zweier Matrizen addiert man komponentenweise
+- für die Addition in Kombination mit der Multiplikation gilt:
+![[Pasted image 20220213145212.png]]
+
+## 6.2.1 Multiplikation von Matrizen
+- die Multiplikation zweier Matrizen kann hintereinander ausgeführt werden
+![[Pasted image 20220213145347.png]]
+
+hier wieder die Reihenfolge der Matrizenmultiplikation beachten
+
+Das Ergebnis der i-ten Zeile und j-ten Spalte wird bestimmt von der i-ten Zeile der ersten Matrix und der j-ten Spalte der zweiten Matrix
+![[Pasted image 20220213145758.png]]
+
+- Für die Multiplikation muss die Länge der Zeilen von A (links) mit der Länge der Spalten von B (rechts) übereinstimmen
+- die Multiplikation ist nicht kommutativ
+- es gibt sogar Nullteiler
+
+## 6.2.3 Rechenregeln
+![[Pasted image 20220213150213.png]]
+![[Pasted image 20220213150218.png]]
+
+## 6.3 Quadratische Matrizen
+bilden einen Ring $(\mathbb{M}_{n},+,*)$:
+- Beide Operationen sind abgeschlossen
+- Addition ist assoziativ
+- Addition hat neutrale Elemente (Nullmatrix)
+- Addition hat inverse Elemente (-A)
+- beide Distrubutivgesetzte gelten
+- zusätzlich hat die Multiplikation ein neutrales Element $\mathbb{E}_n$:
+![[Pasted image 20220213162959.png]]
+![[Pasted image 20220213163010.png]]
+
+es gibt auch inverse Elemente bzgl. der Multiplikation $A^{-1}$
+- und zwar genau dann, wenn $det A \neq 0$ 
+
+wir können dann ein LGS durch Multiplikation der inversen Matrix von beiden Seiten lösen:
+![[Pasted image 20220213163144.png]]
+
+- falls eine quadratische Matrix eine Determinante ungleich 0 hat, heißt sie ==regulär==
+- andernfalls heißt sie ==singulär==
+## 6.3.3 Invertieren von Matrizen
+- Wir notizieren die zu invertierende **Matrix A auf der linken Seite** und die **Einheitsmatrix $\mathbb{E}_n$ auf der rechten Seite**
+![[Pasted image 20220213163823.png]]
+- Nach Anwendung des Gauß-Jordan-Verfahrens, teilen wir jede i-te Zeile jeweils durch $a_{ii}$
+![[Pasted image 20220213163904.png]]
+- Die inverse Matrix ergibt sich auf der rechten Seite
+
+### 6.3.3.1 Beispiel
+Inverse Matrix zu ![[Pasted image 20220213164001.png]] gesucht.
+- det A = -8 $\neq 0$
+
+![[Pasted image 20220213164023.png]]
+
+Probe:
+![[Pasted image 20220213164044.png]]
+## 6.3.4 Eigenschaften der inversen Matrix
+![[Pasted image 20220213164717.png]]
+
+## 6.3.5 Berechung durch Adjunkte
+Die ==Adjunkte== $A^*$ ist definiert durch:
+![[Pasted image 20220213165108.png]]
+![[Pasted image 20220213165114.png]]
+
+die Inverse Matrix berechnet sich durch:
+![[Pasted image 20220213165129.png]]
+
+### 6.3.5.1 Beispiel
+![[Pasted image 20220213165146.png]]
+det A = -21
+ ![[Pasted image 20220213165218.png]]
+ ![[Pasted image 20220213165314.png]]
+ ![[Pasted image 20220213165318.png]]
+ und somit nach einiger Zeit
+ ![[Pasted image 20220213165327.png]]
+ 
+die Inverse Matrix ist
+![[Pasted image 20220213165348.png]]
+
+## 6.3.6 Multiplikationssatz für Determinaten
+Für zwei **quadratische** Matrien A und B gilt:
+![[Pasted image 20220213165551.png]]
+
+es ergibt sich weiterhin (für reguläre Matrizen):
+![[Pasted image 20220213165628.png]]
+
+## 6.4 Rotationsmatrizen
+Additionsthoreme
+![[Pasted image 20220213182028.png]]
+für die Kreisdarstellung gilt:
+![[Pasted image 20220213182042.png]]
+Ferner gelten für die Summe von zwei Winkeln die Additionstheoreme:
+![[Pasted image 20220213182112.png]]
+
+## 6.4.2 Rotation eines Koordinatensystems
+Uns liegt ein dreidimensionales Koordinatensystem vor.
+![[Pasted image 20220213182848.png]]
+Einen Punkt in einem Koordinatensystem geben wir an durch
+![[Pasted image 20220213182717.png]]
+
+Drehen wir das Koordinatensystem um die z-Achse um den Winkel $\delta$ ergibt das:
+![[Pasted image 20220213182816.png]]
+für die neuen Koordinaten des gleichen Punktes P.
+
+Mit Hilfe der Additionstheoreme ergibt sich
+$\bar y=$ ![[Pasted image 20220213182937.png]]
+$\bar x=$ ![[Pasted image 20220213182956.png]]
+
+Folgende Matrix beschreibt diese Umrechung des Koordinatensystems:
+![[Pasted image 20220213183030.png]]
+
+Die Rotationen um die Achsen sind:
+![[Pasted image 20220213183117.png]]
+Drehrichtung: von der x- zur y-Achse
+![[Pasted image 20220213183122.png]]
+Drehrichtung: von der y- zur z-Achse
+![[Pasted image 20220213183126.png]]
+Drehrichtung: von der z- zur x-Achse
+
+**Für Rotation um ein Objekt $-\delta$ benutzen**
+
+## Rotation um eine Gerade durch den Ursprung
+
+## Rotation um eine Gerade allgemein
+
+## Translation
+
+## 6.5 Skalarprodukte
+In 3D
+Wenn wir Längen und Winkel kennen
+![[Pasted image 20220213190144.png]]
+
+## 6.5.2 Senkrechte Projektion
+
+## 6.5.3 Skalarprodukt allgemein
+![[Pasted image 20220213190507.png]]
+![[Pasted image 20220213190519.png]]
+![[Pasted image 20220213190532.png]]
+
+## 6.5.6 Orthonormalsystem
+Unter einem ==ONS== von n Vektoren in einem Vektotraum V verstehen wir Vektoren
+- mit Länge 1
+- zwei unterschiedliche Vektoren sind orthogonal
+
+![[Pasted image 20220213190801.png]]
+Beispiel: kanonische Einheitsvektoren
+
+## 6.5.7 Orthonormalbasis
+Eine Basis, die gleichzeitig ein Orthonormalsystem bildet, nennt man ==Orthonormalbasis==.
+
+## 6.5.8 Skalarprodukt für Vektoren in einem ONS
+![[Pasted image 20220213191033.png]]![[Pasted image 20220213191038.png]]
